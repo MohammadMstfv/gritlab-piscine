@@ -1,0 +1,2 @@
+ls -At | grep -v '^\.' | awk '{if(NR>1)printf",";if(-d$NF)printf $NF;else printf"%s",$NF}END{print""}'
+#ls -t -u -p | paste -sd "," -
